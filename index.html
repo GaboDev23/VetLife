@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetLife - Plantilla</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="imagenes/favicon-16x16.png">
+</head>
+<body id="inicio">
+    <header>
+        <div class="logo__container">
+            <h1 class="logo__title" title="Ir al inicio"><a href="#inicio">Vet<span>Life</span></a></h1>
+            <img src="imagenes/android-chrome-192x192.png" alt="" class="logo__img">
+        </div>
+        <nav>
+            <label class="toggle__container">
+                <input type="checkbox" class="toggle__input">
+                <span class="toggle__button"></span>
+            </label>
+            <ul class="nav__list">
+                <li class="nav__item" title="Servicios"><a href="#servicios" class="nav__link">Servicios</a></li>
+                <li class="nav__item" title="Nosotros"><a href="#nosotros" class="nav__link">Nosotros</a></li>
+                <li class="nav__item"  title="Contacto"><a href="#contacto" class="nav__link">Contacto</a></li>
+                <li class="nav__item" title="Reseñas"><a href="#resenas" class="nav__link">Reseñas</a></li>
+                <li class="nav__item" title="Urgencias"><a href="#urgencias" class="nav__link">Urgencias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ------------------------------------------------------- -->
+
+    <main>
+        <section class="inicio" id="inicio">
+            <div class="video-container">
+                <video src="videos/veterinaria.mp4" autoplay loop muted></video>
+                <div class="video-overlay">
+                    <h2 class="titulo">Bienvenido a VetLife</h2>
+                    <p class="descripcion">Tu mejor opción para el cuidado de tu mascota</p>
+                    <a href="#servicios" class="btn">Conoce nuestros servicios</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="servicios" id="servicios"></section>
+        <section class="nosotros" id="nosotros"></section>
+        <section class="contacto" id="contacto"></section>
+        <section class="resenas" id="resenas"></section>
+        <section class="urgencias" id="urgencias"></section>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+</html>

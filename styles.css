@@ -1,0 +1,279 @@
+/* Estilos generales */
+* { /* Estilos generales */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+html { /* Para hacer scroll suave */
+    scroll-behavior: smooth;
+}
+
+body { /* Estilos del body, debe ocupar todos las secciones */
+    background-color: #f5f5f5;
+    max-width: 100%;
+    height: 600dvh;
+}
+
+/* Estilos de cabecera */
+header { /* Estilos del la cabecera */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.logo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-grow: 2;
+    position: relative;
+}
+
+.logo__title {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.9rem;
+    z-index: 1;
+    font-style: italic;
+}
+
+.logo__title a {
+    text-decoration: none;
+    color: #48e
+}
+
+.logo__title span {
+    color: #009900;
+}
+
+.logo__img {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    flex-grow: 8;
+}
+
+.toggle__container {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+}
+
+.toggle__input {
+    display: none;
+}
+
+.toggle__button {
+    display: block;
+    /* background-color: #090909; */
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ddd;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.toggle__button::before {
+    content: '≡';
+    font-size: 3rem;
+}
+
+.toggle__input:checked + .toggle__button::before {
+    content: '×';
+}
+
+.nav__list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
+.toggle__container:has(.toggle__input:checked) ~ .nav__list {
+    height: 600px;
+}
+
+.nav__item {
+    list-style: none;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__link {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: #ddd;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.nav__link:hover {
+    background-color: #48e;
+    color: #f5f5f5;
+}
+
+main { /* El main debe ocupar las 6 secciones */
+    width: 100%;
+    height: 600dvh;
+}
+
+.inicio {
+    width: 100%;
+    height: 100dvh;
+}
+
+.video-container {
+    width: 100%;
+    height: 100dvh;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    color: #ddd;
+    gap: 20px;
+}
+
+.video-overlay h2 {
+    font-size: 3rem;
+    color: #48e;
+}
+
+.video-overlay p {
+    font-size: 1.5rem;
+}
+
+.video-overlay a {
+    text-decoration: none;
+    color: #48e;
+    font-size: 1.5rem;
+    border: 2px solid #48e;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+
+.video-overlay a:hover {
+    background-color: #48e;
+    color: #f5f5f5;
+}
+
+main .servicios {
+    height: 100dvh;
+    background-color: #000000;
+}
+
+main .nosotros {
+    height: 100dvh;
+    background-color: #ff0000;
+}
+
+main .contacto {
+    height: 100dvh;
+    background-color: #00ff00;
+}
+
+main .resenas {
+    height: 100dvh;
+    background-color: #0000ff;
+}
+
+main .urgencias {
+    height: 100dvh;
+    background-color: #ffff00;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #ff00ff;
+    z-index: 1000;
+}
+
+@media screen and (min-width: 860px) {
+    header nav {
+        position: relative;
+        height: 100%;
+    }
+
+    .logo__container {
+        flex-grow: 1;
+    }
+
+    .toggle__container {
+        display: none;
+    }
+
+    .nav__list {
+        display: flex;
+        top: 0;
+        height: 100%;
+    }
+
+    .nav__item {
+        margin: 0;
+    }
+
+    .nav__link {
+        height: 100%;
+        width: 90%;
+        padding: 20px;
+    }
+}
