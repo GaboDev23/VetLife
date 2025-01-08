@@ -405,7 +405,7 @@ main { /* El main debe ocupar las 6 secciones */
     resize: none;
 }
 
-.form button {
+.form input[type="submit"] {
     color: #48e;
     background-color: #f5f5f5;
     font-size: 1.5rem;
@@ -416,7 +416,7 @@ main { /* El main debe ocupar las 6 secciones */
     cursor: pointer;
 }
 
-.form button:hover {
+.form input[type="submit"]:hover {
     background-color: #48e;
     color: #f5f5f5;
 }
