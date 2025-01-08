@@ -42,15 +42,104 @@
             </div>
         </section>
 
+        <!-- ------------------------------------------------------- -->
+
+        <section id="servicios" class="servicios__section">
+            <div class="servicios__header">
+                <h2>Nuestros Servicios</h2>
+                <p>Cuidamos a tus mascotas como si fueran nuestras. Descubre todo lo que podemos hacer por ellos.</p>
+            </div>
+            <div class="servicios__grid">
+                <div class="servicio__card">
+                    <div class="servicio__icon">🐾</div>
+                    <h3>Consultas Generales</h3>
+                    <p>Atención médica completa para mantener a tu mascota sana y feliz.</p>
+                </div>
+                <div class="servicio__card">
+                    <div class="servicio__icon">💉</div>
+                    <h3>Vacunación</h3>
+                    <p>Protege a tus mascotas de enfermedades comunes con nuestras vacunas.</p>
+                </div>
+                <div class="servicio__card">
+                    <div class="servicio__icon">🩺</div>
+                    <h3>Diagnóstico</h3>
+                    <p>Contamos con tecnología avanzada para detectar cualquier problema de salud.</p>
+                </div>
+                <div class="servicio__card">
+                    <div class="servicio__icon">✂️</div>
+                    <h3>Peluquería</h3>
+                    <p>Mantenlos limpios, bonitos y cómodos con nuestros servicios de estética.</p>
+                </div>
+                <div class="servicio__card">
+                    <div class="servicio__icon">🏥</div>
+                    <h3>Cirugías</h3>
+                    <p>Intervenciones quirúrgicas seguras y profesionales para cualquier necesidad.</p>
+                </div>
+                <div class="servicio__card">
+                    <div class="servicio__icon">🚑</div>
+                    <h3>Emergencias</h3>
+                    <p>Estamos disponibles para cualquier urgencia que pueda surgir.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ------------------------------------------------------- -->
+
+        <section class="nosotros" id="nosotros">
+            <div class="nosotros__header">
+                <h2>Nosotros</h2>
+                <p>Conoce a nuestro equipo de profesionales que se encargará de cuidar a tu mascota.</p>
+            </div>
+            <div class="nosotros__grid">
+                <div class="nosotros__card">
+                    <img src="imagenes/veterinario.webp" alt="" class="nosotros__img">
+                    <h3>Dr. Juan Pérez</h3>
+                    <p>El Dr. Juan Pérez es un veterinario apasionado con más de 10 años de experiencia en el cuidado de mascotas. Su especialidad incluye medicina preventiva, diagnóstico avanzado y cirugía de tejidos blandos. Su enfoque profesional se combina con una gran empatía hacia los animales, lo que lo convierte en el veterinario favorito de muchas familias. Su compromiso es garantizar la salud y felicidad de cada paciente que atiende.</p>
+                </div>
+                <div class="nosotros__card">
+                    <img src="imagenes/veterinaria.webp" alt="" class="nosotros__img">
+                    <h3>Dra. Paula Rodríguez</h3>
+                    <p>La Dra. Paula Rodríguez es una experta en medicina veterinaria con un enfoque especial en la salud integral de gatos y perros. Cuenta con una amplia formación en nutrición animal y medicina interna. Su habilidad para conectar tanto con los animales como con sus dueños, junto con su trato amable y profesionalismo, aseguran que cada visita sea una experiencia positiva. Su misión es ofrecer cuidados de calidad para mejorar la vida de las mascotas.</p>
+                </div>
+        </section>
+
+        <!-- ------------------------------------------------------- -->
+
+        <section class="contacto" id="contacto">
+            <div class="contacto__header">
+                <h2>Contacto</h2>
+                <p>Estamos aquí para responder a tus preguntas y ayudarte en lo que necesites. Contáctanos para programar una cita o para cualquier otra consulta.</p>
+            </div>
+            <div class="contacto__form">
+                <h3>Envíanos tu consulta</h3>
+                <form action="enviar-formulario.php" method="POST" class="form" id="form">
+                    <input type="text" id="nombre" class="input" placeholder="Ingrese su nombre" name="nombre" required>
+                    <span class="mensaje"></span>
+                    <input placeholder="Ingrese su email" type="email" id="email" name="email" required class="input">
+                    <span class="mensaje"></span>
+                    <input type="text" placeholder="Ingrese su número de télefono o celular" name="telefono" id="" class="input" required>
+                    <span class="mensaje"></span>
+                    <textarea id="mensaje" placeholder="Escribe tu consulta" name="mensaje" required class="input"></textarea>
+                    <span class="mensaje"></span>
+                    <button type="submit" class="emviar" id="enviar" name="enviar ">Enviar</button>
+                </form>
+            </div>
+            <div class="contacto__info">
+                <h3>Información de Contacto</h3>
+                <p><strong>Dirección:</strong> Calle Falsa 123, Springfield</p>
+                <p><strong>Teléfono:</strong> 555-1234</p>
+                <p><strong>Email:</strong>vetlife@info.com</p>
+            </div>
+        </section>
 
 
-        <section class="servicios" id="servicios"></section>
-        <section class="nosotros" id="nosotros"></section>
-        <section class="contacto" id="contacto"></section>
+
         <section class="resenas" id="resenas"></section>
         <section class="urgencias" id="urgencias"></section>
     </main>
     <footer></footer>
+    
     <script src="script.js"></script>
+    <?php include('enviar-formulario.php') ?>
 </body>
 </html>
