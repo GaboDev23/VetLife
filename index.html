@@ -112,16 +112,17 @@
             </div>
             <div class="contacto__form">
                 <h3>Envíanos tu consulta</h3>
-                <form action="https://formsubmit.co/gabo.gh12398@gmail.com" method="POST" class="form" id="form">
+                <form action="https://formspree.io/f/xdkkpqly" method="POST" class="form" id="form">
                     <input type="text" id="nombre" class="input" placeholder="Ingrese su nombre" name="nombre" required>
                     <span class="mensaje"></span>
                     <input placeholder="Ingrese su email" type="email" id="email" name="email" required class="input">
                     <span class="mensaje"></span>
-                    <input type="text" placeholder="Ingrese su número de télefono o celular" name="telefono" id="" class="input" required>
+                    <input type="number" placeholder="Ingrese su número de télefono o celular" name="telefono" id="" class="input" required>
                     <span class="mensaje"></span>
                     <textarea id="mensaje" placeholder="Escribe tu consulta" name="mensaje" required class="input"></textarea>
                     <span class="mensaje"></span>
-                    <input type="submit" class="emviar" id="enviar" name="enviar " value="Enviar">
+                    <input type="hidden" name="_next" value="index.html" />
+                    <input type="submit" class="emviar" id="enviar" value="Enviar">
                 </form>
             </div>
             <div class="contacto__info">
@@ -129,6 +130,14 @@
                 <p><strong>Dirección:</strong> Calle Falsa 123, Springfield</p>
                 <p><strong>Teléfono:</strong> 555-1234</p>
                 <p><strong>Email:</strong>vetlife@info.com</p>
+                <iframe
+                height="450"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAIqRtOyguLlsVlHR_T45uLK3zQ2UbH0T8&q=Space+Needle,Seattle+WA">
+                </iframe>
             </div>
         </section>
 
@@ -140,6 +149,6 @@
     <footer></footer>
 
     <script src="script.js"></script>
-    <?php include('enviar-formulario.php') ?>
+    <!-- <?php include('enviar-formulario.php') ?> -->
 </body>
 </html>

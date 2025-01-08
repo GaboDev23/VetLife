@@ -5,10 +5,9 @@ const input = document.querySelectorAll('.input');
 const enviar = document.getElementById('enviar');
 
 enviar.addEventListener('click', e => {
-    e.preventDefault();
     for (const elemento of input) {
-        console.log(elemento);
         if (elemento.value.trim() === '') {
+            e.preventDefault();
             cambiarColor(elemento, 'rgba(255, 0, 0');
             elemento.nextElementSibling.textContent = 'Este campo es obligatorio';
             elemento.nextElementSibling.style.color = 'red';
@@ -18,6 +17,7 @@ enviar.addEventListener('click', e => {
             if (elemento.name === 'nombre') {
                 verificacion = verificarNombre(elemento.value);
                 if (!verificacion[1]) {
+                    e.preventDefault();
                     cambiarColor(elemento, 'rgba(255, 0, 0');
                     elemento.nextElementSibling.textContent = verificacion[0];
                     elemento.nextElementSibling.style.color = 'red';
@@ -30,6 +30,7 @@ enviar.addEventListener('click', e => {
             } else if (elemento.name === 'email') {
                 verificacion = verificarEmail(elemento.value);
                 if (!verificacion[1]) {
+                    e.preventDefault();
                     cambiarColor(elemento, 'rgba(255, 0, 0');
                     elemento.nextElementSibling.textContent = verificacion[0];
                     elemento.nextElementSibling.style.color = 'red';
@@ -42,6 +43,7 @@ enviar.addEventListener('click', e => {
             } else if (elemento.name === 'telefono') {
                 verificacion = verificarTelefono(elemento.value);
                 if (!verificacion[1]) {
+                    e.preventDefault();
                     cambiarColor(elemento, 'rgba(255, 0, 0');
                     elemento.nextElementSibling.textContent = verificacion[0];
                     elemento.nextElementSibling.style.color = 'red';
@@ -51,8 +53,6 @@ enviar.addEventListener('click', e => {
                     elemento.nextElementSibling.textContent = verificacion[0];
                     elemento.nextElementSibling.style.color = 'green';
                 }
-            } else {
-                
             }
         }
     }
