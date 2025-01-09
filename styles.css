@@ -612,13 +612,14 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
 }
 
 .politicas {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 
 .politicas h3 {
@@ -640,6 +641,8 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
+    align-items: center;
 }
 
 .footer__social h3 {
@@ -668,6 +671,7 @@ footer {
 
 .footer__creador {
     font-size: 1.2rem;
+    width: 100%;
 }
 
 .footer__copy {
@@ -705,6 +709,24 @@ footer {
     }
     .contacto__form, .contacto__info {
         width: 50%;
+    }
+
+    .footer__container {
+        flex-direction: row;
+        gap: 0;
+        align-items: center;
+    }
+
+    .politicas {
+        width: 30%;
+    }
+
+    .footer__creador {
+        width: 30%;
+    }
+
+    .footer__social {
+        width: 30%;
     }
 }
 
