@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="imagenes/favicon-16x16.png">
 </head>
 <body id="inicio">
+    <a href="#top" class="to__top" title="Volver arriba">🡅</a>
+
     <header>
         <div class="logo__container">
             <h1 class="logo__title" title="Ir al inicio"><a href="#inicio">Vet<span>Life</span></a></h1>
@@ -141,12 +143,81 @@
             </div>
         </section>
 
+        <!-- ------------------------------------------------------- -->
 
+        <section class="resenas" id="resenas">
+            <div class="resenas__header">
+                <h2>Reseñas</h2>
+                <p>Descubre lo que nuestros clientes tienen que decir sobre nosotros.</p>
+            </div>
+            <div class="resenas__container">
+                <div class="resena__card">
+                    <img alt="usuario1" class="resena__img">
+                    <h3 class="client">Lucas</h3>
+                    <p>¡Excelente atención! El Dr. Pérez es muy profesional y amable. Siempre me siento seguro dejando a mi perro en sus manos.</p>
+                </div>
+                <div class="resena__card">
+                    <img alt="usuario2" class="resena__img">
+                    <h3 class="client">María</h3>
+                    <p>La Dra. Rodríguez es una veterinaria increíble. Siempre se toma el tiempo de explicar todo y de responder a mis preguntas. ¡La recomiendo!</p>
+                </div>
+                <div class="resena__card">
+                    <img alt="usuario3" class="resena__img">
+                    <h3 class="client">Carlos</h3>
+                    <p>¡Mi perro adora ir a la peluquería! Siempre lo tratan con mucho cariño y queda hermoso. ¡Gracias VetLife!</p>
+                </div>
+        </section>
 
-        <section class="resenas" id="resenas"></section>
-        <section class="urgencias" id="urgencias"></section>
+        <!-- ------------------------------------------------------- -->
+
+        <section class="urgencias" id="urgencias">
+            <div class="urgencias__header">
+                <h2>Urgencias</h2>
+                <p>Estamos disponibles las 24 horas para atender cualquier emergencia que pueda surgir con tu mascota.</p>
+            </div>
+            <div class="urgencias__grid">
+                <div class="urgencia__card">
+                    <div class="urgencia__icon">🚑</div>
+                    <h3>Atención Inmediata</h3>
+                    <p>Contamos con un equipo de veterinarios de guardia para atender cualquier emergencia.</p>
+                </div>
+                <div class="urgencia__card">
+                    <div class="urgencia__icon">📞</div>
+                    <h3>Contacto Directo</h3>
+                    <p>Si tu mascota necesita atención urgente, no dudes en llamarnos al 555-1234.</p>
+                </div>
+                <div class="urgencia__card">
+                    <div class="urgencia__icon">🏥</div>
+                    <h3>Instalaciones Equipadas</h3>
+                    <p>Nuestras instalaciones cuentan con todo lo necesario para atender cualquier emergencia.</p>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+
+    <footer>
+        <div class="footer__container">
+            <div class="politicas">
+                <h3 class="footer__title">Políticas</h3>
+                <a href="#" class="footer__link">Política de privacidad</a>
+                <a href="#" class="footer__link">Términos y condiciones</a>
+                <a href="#" class="footer__link">Política de cookies</a>
+            </div>
+
+            <div class="footer__social">
+                <h3 class="footer__title">Nuestras redes sociales</h3>
+                <a href="https://www.facebook.com" class="social__link" title="Facebook"><img src="imagenes/facebook.png" alt="Facebook"> Facebook</a>
+                <a href="https://www.instagram.com" class="social__link" title="Instagram"><img src="imagenes/instagram.png" alt="Instagram"> Instagram</a>
+                <a href="https://www.twitter.com" class="social__link" title="Twitter"><img src="imagenes/twitter.png" alt="Twitter"> Twitter</a>
+            </div>
+
+            <div class="footer__creador">
+                <p class="footer__copy">© 2025 VetLife. Todos los derechos reservados.</p>
+
+                <p class="footer__info">Sitio web diseñado por <span class="footer__name">Gilberto Gabriel Herling</span></p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
     <!-- <?php include('enviar-formulario.php') ?> -->

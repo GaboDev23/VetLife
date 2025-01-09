@@ -3,6 +3,8 @@
 const form = document.getElementById('form');
 const input = document.querySelectorAll('.input');
 const enviar = document.getElementById('enviar');
+const resenaIMG = document.querySelectorAll('.resena__img');
+const clientes = document.querySelectorAll('.client');
 
 enviar.addEventListener('click', e => {
     for (const elemento of input) {
@@ -122,3 +124,18 @@ const cambiarColor = (elemento, color) => {
     elemento.style.backgroundColor = `${color}, .1)`;
     elemento.style.border = `1px solid ${color})`;
 }
+
+const usuarios = async () => {
+    const response = await fetch('https://randomuser.me/api/?results=3');
+    const data = await response.json();
+    return data;
+}
+
+usuarios()
+    .then(data => {
+        for (const usuario in resenaIMG) {
+            resenaIMG[usuario].setAttribute('src', data.results[usuario].picture.thumbnail);
+            clientes[usuario].textContent = `${data.results[usuario].name.first} ${data.results[usuario].name.last}`;
+        }
+    })
+    .catch(error => console.log(error));
